@@ -35,5 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Tailwind
 src/styles/tw.css
+src/styles/tw.module.css
