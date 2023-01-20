@@ -1,0 +1,14 @@
+{
+    "name": "@snailycad-manager/cli",
+    "version": "3.0.0-dev.0",
+    "description": "SnailyCAD Manager CLI",
+    "main": "null",
+    "author": "Whitigol <whitetigerwolfthe1st@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "type": "module",
+    "scripts": {
+        "build": "npx tsc",
+        "watch": "npx tsc -w"
+    }
+}

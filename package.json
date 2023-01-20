@@ -1,0 +1,38 @@
+{
+    "name": "snailycad-manager-v3",
+    "version": "3.0.0-dev.0",
+    "private": false,
+    "type": "module",
+    "licence": "MIT",
+    "bin": {
+        "scm": "cli/dist/index.js"
+    },
+    "scripts": {
+        "dev": "next dev",
+        "dev:cli": "cd cli && yarn watch",
+        "dev:tw": "tailwindcss -i src/app/globals.css -o ./src/styles/tw.css -w",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@next/font": "13.1.2",
+        "@types/node": "18.11.18",
+        "@types/react": "18.0.27",
+        "@types/react-dom": "18.0.10",
+        "chalk": "^5.2.0",
+        "eslint": "8.32.0",
+        "eslint-config-next": "13.1.2",
+        "inquirer": "^9.1.4",
+        "nanospinner": "^1.1.0",
+        "next": "13.1.2",
+        "pm2": "^5.2.2",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "typescript": "4.9.4"
+    },
+    "devDependencies": {
+        "@types/inquirer": "^9.0.3",
+        "tailwindcss": "^3.2.4"
+    }
+}

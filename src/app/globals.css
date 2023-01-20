@@ -1,0 +1,8 @@
+@import url('https://unpkg.com/@picocss/pico@latest/css/pico.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply transition-all flex flex-row gap-1 bg-sky-500 bg-opacity-20 p-2 w-fit h-fit border-[1px] border-solid border-sky-500 rounded hover:bg-opacity-100;
+}
