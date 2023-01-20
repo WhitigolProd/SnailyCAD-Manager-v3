@@ -1,5 +1,7 @@
-const configPath = '/SnailyCADManagerData/config.json';
 import fs from 'fs';
+import path from 'path';
+import RootDir from '../../../RootDir.mjs';
+const configPath = path.join(RootDir, '/storage/settings.json');
 class Storage {
     // Initialize the storage constructor.
     key;

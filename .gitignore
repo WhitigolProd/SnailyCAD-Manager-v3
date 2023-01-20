@@ -35,5 +35,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Tailwind Build
 src/styles/tw.css
 src/styles/tw.module.css
+
+# Storage
+storage/*
