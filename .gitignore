@@ -33,4 +33,4 @@ yarn-error.log*
 .turbo
 
 # Tailwind Build
-tw.css
+tailwind.css
