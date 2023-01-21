@@ -14,7 +14,7 @@ export default function Main() {
                 className="flex flex-row justify-center items-center gap-2
             "
             >
-                <Button>
+                <Button style="success">
                     <span>Start CAD</span>
                 </Button>
             </div>
