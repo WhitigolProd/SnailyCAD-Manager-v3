@@ -1,8 +1,9 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 async function getData() {
-    const res = await fetch('http://localhost:8081/server-info');
-    return await res.json();
+    const res = await axios.get('http://localhost:8081/server-info');
+    return res.data;
 }
 
 export default function MyComponent() {
