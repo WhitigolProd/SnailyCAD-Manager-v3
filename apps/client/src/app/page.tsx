@@ -1,17 +1,15 @@
 'use client';
 import Main from '@/components/Main';
-import ServerInfo from '@/components/ServerInfo';
 import Tools from '@/components/Tools';
 import React from 'react';
-import 'tw-elements';
+import BottomInfo from '@/components/Info/BottomInfo';
 
 export default function Home() {
     return (
-        <div className="h-screen flex flex-col justify-center items-center">
+        <div className="h-[100%] flex flex-col justify-center items-center">
             <Main />
             <Tools />
-            {/* @ts-ignore */}
-            <ServerInfo />
+            <BottomInfo />
         </div>
     );
 }

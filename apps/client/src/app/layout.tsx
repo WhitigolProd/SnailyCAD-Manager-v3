@@ -1,4 +1,3 @@
-import './globals.css';
 import '../styles/tailwind.css';
 import Header from '@/components/Header';
 
@@ -14,7 +13,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
             <head />
-            <body>
+            <body className="h-screen">
                 <Header />
                 {children}
             </body>

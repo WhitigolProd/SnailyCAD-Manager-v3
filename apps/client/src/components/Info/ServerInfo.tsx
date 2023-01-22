@@ -2,7 +2,13 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 async function getData() {
-    const res = await axios.get('http://localhost:8081/server-info');
+    const res = await axios.get('/api/SystemInfo');
+    if (res.status !== 200) {
+        return {
+            platform: 'Unknown',
+            arch: 'Unknown',
+        };
+    }
     return res.data;
 }
 
@@ -21,8 +27,8 @@ export default function MyComponent() {
     }, []);
 
     return (
-        <div className="fixed bottom-0 right-0 m-2 text-xs text-right bg-black bg-opacity-25 rounded-lg p-3">
-            <p>Server Information</p>
+        <div>
+            <p className="text-sm mb-1 underline">Host Info</p>
             {data ? (
                 <div>
                     <div>Platform: {data.platform}</div>

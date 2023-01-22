@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Buttons/Button';
 
 export default function Tools() {
     return (
