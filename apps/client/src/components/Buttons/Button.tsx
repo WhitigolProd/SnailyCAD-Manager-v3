@@ -1,37 +1,33 @@
 import { buttons } from '@/styles/styles';
 import React from 'react';
 
-export default function Button({ children, ...props }: any) {
+export default function Button({
+    children,
+    style,
+    size,
+    onClick,
+}: {
+    children: React.ReactNode;
+    style?:
+        | 'primary'
+        | 'secondary'
+        | 'success'
+        | 'danger'
+        | 'warning'
+        | 'info'
+        | 'light'
+        | 'dark'
+        | 'link';
+    size?: 'sm' | 'md' | 'lg';
+    onClick?: () => void;
+}) {
     return (
+        // Button with the selected style & size with a default fallback
         <div
-            className={`${
-                props.style === 'success'
-                    ? buttons.success
-                    : props.style === 'danger'
-                    ? buttons.danger
-                    : props.style === 'warning'
-                    ? buttons.warning
-                    : props.style === 'info'
-                    ? buttons.info
-                    : props.style === 'primary'
-                    ? buttons.primary
-                    : props.style === 'secondary'
-                    ? buttons.secondary
-                    : props.style === 'light'
-                    ? buttons.light
-                    : props.style === 'dark'
-                    ? buttons.dark
-                    : props.style === 'link'
-                    ? buttons.link
-                    : props.style === 'outline'
-                    ? buttons.outline
-                    : props.style === 'text'
-                    ? buttons.text
-                    : props.style === 'disabled'
-                    ? buttons.disabled
-                    : buttons.primary
+            className={`${buttons.base} ${buttons.sizes[size || 'md']} ${
+                buttons.colors[style || 'dark']
             }`}
-            onClick={props.onClick}
+            onClick={onClick}
         >
             {children}
         </div>

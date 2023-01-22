@@ -3,6 +3,7 @@ import Main from '@/components/Main';
 import ServerInfo from '@/components/ServerInfo';
 import Tools from '@/components/Tools';
 import React from 'react';
+import 'tw-elements';
 
 export default function Home() {
     return (
