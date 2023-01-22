@@ -34,3 +34,6 @@ yarn-error.log*
 
 # Tailwind Build
 tailwind.css
+
+# Dist Folder
+dist

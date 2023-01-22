@@ -11,6 +11,10 @@
         "dev": {
             "cache": false
         },
-        "tailwind": {}
+        "tailwind": {},
+        "watch": {
+            "dependsOn": ["^watch"],
+            "outputs": ["dist/**"]
+        }
     }
 }

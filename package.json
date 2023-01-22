@@ -2,6 +2,9 @@
     "name": "snailycad-manager-v3",
     "version": "0.0.0",
     "private": true,
+    "bin": {
+        "scm": "./apps/cli/dist/index.js"
+    },
     "workspaces": [
         "apps/*",
         "packages/*"
@@ -12,7 +15,8 @@
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
         "tailwind": "yarn workspace @sc-manager/client run tailwind",
-        "tailwind:watch": "yarn workspace @sc-manager/client run tailwind:watch"
+        "tailwind:watch": "yarn workspace @sc-manager/client run tailwind:watch",
+        "watch": "turbo run watch --parallel"
     },
     "devDependencies": {
         "concurrently": "^7.6.0",
