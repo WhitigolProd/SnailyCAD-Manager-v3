@@ -1,7 +1,10 @@
 import '../styles/tailwind.css';
 import Header from '@/components/Header/Header';
 import Auth from '@/components/Auth/Auth';
-let user = false; //! Testing purposes only - remove in production
+let user = true; //! Testing purposes only - remove in production
+
+// Get the window.location.hostname from the browser
+
 export default function RootLayout({
     children,
 }: {

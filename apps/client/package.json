@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "tailwind": "tailwindcss -i ./src/app/globals.css -o ./styles/tailwind.css",
+        "watch": "tailwindcss -i ./src/app/globals.css -o ./src/styles/tailwind.css --watch",
         "tailwind:watch": "tailwindcss -i ./src/app/globals.css -o ./src/styles/tailwind.css --watch"
     },
     "dependencies": {

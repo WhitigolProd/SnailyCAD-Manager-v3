@@ -9,6 +9,7 @@
             "outputs": []
         },
         "dev": {
+            "dependsOn": ["^dev", "tailwind"],
             "cache": false
         },
         "tailwind": {},

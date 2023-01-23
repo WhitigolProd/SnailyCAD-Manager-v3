@@ -10,7 +10,6 @@ export default function Home() {
         <div className={containers.base}>
             <Main />
             <Tools />
-            <BottomInfo />
         </div>
     );
 }
