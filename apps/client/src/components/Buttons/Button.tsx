@@ -5,6 +5,7 @@ export default function Button({
     children,
     style,
     size,
+    className,
     onClick,
 }: {
     children: React.ReactNode;
@@ -19,6 +20,7 @@ export default function Button({
         | 'dark'
         | 'link';
     size?: 'sm' | 'md' | 'lg';
+    className?: string;
     onClick?: () => void;
 }) {
     return (
@@ -26,7 +28,7 @@ export default function Button({
         <div
             className={`${buttons.base} ${buttons.sizes[size || 'md']} ${
                 buttons.colors[style || 'dark']
-            }`}
+            } ${className}`}
             onClick={onClick}
         >
             {children}
