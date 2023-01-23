@@ -1,6 +1,7 @@
 import '../styles/tailwind.css';
 import Header from '@/components/Header/Header';
 import Auth from '@/components/Auth/Auth';
+import ToastContainer from '@/components/Toast/ToastContainer';
 let user = true; //! Testing purposes only - remove in production
 
 // Get the window.location.hostname from the browser
@@ -18,6 +19,7 @@ export default function RootLayout({
       */}
             <head />
             <body className="h-screen">
+                <ToastContainer />
                 <div className="h-full flex flex-col flex-grow">
                     {user ? (
                         <>

@@ -12,6 +12,14 @@ import MenuOptions from './MenuOptions';
 // Handle open/close of dialog using state
 
 export default function Header() {
+    const getWindowHostname = () => {
+        if (typeof window !== 'undefined') {
+            return window.location.hostname;
+        }
+
+        return 'localhost';
+    };
+
     const [open, setOpen] = useState(false);
     const handleOpen = () => {
         setOpen(!open);
