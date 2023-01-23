@@ -50,45 +50,6 @@ export default function Header() {
                 </div>
             </header>
 
-            {window.location.hostname === 'localhost' && (
-                <>
-                    <div className="fixed bottom-0 right-0 m-2">
-                        <Button
-                            style="warning"
-                            size="sm"
-                            onClick={handleLocalWarning}
-                        >
-                            <Icon IconName="warning" />
-                            <span>View Warning</span>
-                        </Button>
-                    </div>
-
-                    <dialog open={localWarning}>
-                        <Article title="Warning">
-                            <p className="text-center">
-                                You are currently running SnailyCAD Manager
-                                on&nbsp;
-                                <code>localhost</code>. To use SnailyCAD Manager
-                                on a remote device, you must forward the port of
-                                SnailyCAD Manager on the machine you are running
-                                it on.
-                            </p>
-
-                            <ArticleFooter>
-                                <Button
-                                    style="dark"
-                                    size="sm"
-                                    onClick={handleLocalWarning}
-                                >
-                                    <Icon IconName="close" />
-                                    <span>Close</span>
-                                </Button>
-                            </ArticleFooter>
-                        </Article>
-                    </dialog>
-                </>
-            )}
-
             <dialog open={open}>
                 <Article
                     title="Menu"
