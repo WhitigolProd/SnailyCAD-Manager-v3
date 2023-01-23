@@ -1,6 +1,7 @@
 import '../styles/tailwind.css';
-import Header from '@/components/Header';
-
+import Header from '@/components/Header/Header';
+import Auth from '@/components/Auth/Auth';
+let user = false; //! Testing purposes only - remove in production
 export default function RootLayout({
     children,
 }: {
@@ -14,8 +15,16 @@ export default function RootLayout({
       */}
             <head />
             <body className="h-screen">
-                <Header />
-                {children}
+                {user ? (
+                    <>
+                        <Header />
+                        {children}
+                    </>
+                ) : (
+                    <div className="flex flex-col justify-center items-center h-full">
+                        <Auth />
+                    </div>
+                )}
             </body>
         </html>
     );
