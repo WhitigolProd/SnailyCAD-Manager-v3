@@ -1,9 +1,10 @@
 import Button from '@/components/Buttons/Button';
+import { containers } from '@/styles/styles';
 import React from 'react';
 
 export default function BtnsExample() {
     return (
-        <div className="container">
+        <div className={containers.base}>
             <article>
                 <header>Buttons Examples</header>
                 <div className="flex flex-col gap-2">

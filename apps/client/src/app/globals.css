@@ -14,3 +14,7 @@
 .btn {
     @apply p-2 bg-sky-500 bg-opacity-20;
 }
+
+a {
+    @apply !bg-transparent text-sky-500 hover:text-sky-600 focus:bg-sky-700 active:bg-sky-700;
+}
