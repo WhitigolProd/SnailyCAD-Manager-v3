@@ -18,16 +18,18 @@ export default function RootLayout({
       */}
             <head />
             <body className="h-screen">
-                {user ? (
-                    <>
-                        <Header />
-                        {children}
-                    </>
-                ) : (
-                    <div className="flex flex-col justify-center items-center h-full">
-                        <Auth />
-                    </div>
-                )}
+                <div className="h-full flex flex-col flex-grow">
+                    {user ? (
+                        <>
+                            <Header />
+                            {children}
+                        </>
+                    ) : (
+                        <div className="flex flex-col justify-center items-center h-full">
+                            <Auth />
+                        </div>
+                    )}
+                </div>
             </body>
         </html>
     );

@@ -24,20 +24,22 @@ export default function Header() {
 
     return (
         <>
-            <header className="fixed top-0 w-screen flex flex-row gap-2 justify-center items-center py-3 bg-sky-800 text-white">
-                <Link href="/">
-                    <div className="flex flex-row gap-1 justify-center items-center cursor-pointer">
-                        <img
-                            src={logo.src}
-                            alt="SnailyCAD Manager Logo"
-                            className="w-5 h-5"
-                        />
-                        <p className="text-white">SnailyCAD Manager</p>
-                    </div>
-                </Link>
-                <Button style="dark" size="sm" onClick={handleOpen}>
-                    <Icon IconName="menu" />
-                </Button>
+            <header className="w-full py-3 bg-sky-800/20 text-white">
+                <div className="container flex flex-row justify-between items-center">
+                    <Link href="/">
+                        <div className="flex flex-row gap-1 justify-center items-center cursor-pointer">
+                            <img
+                                src={logo.src}
+                                alt="SnailyCAD Manager Logo"
+                                className="w-5 h-5"
+                            />
+                            <p className="text-white">SnailyCAD Manager</p>
+                        </div>
+                    </Link>
+                    <Button style="secondary" size="sm" onClick={handleOpen}>
+                        <Icon IconName="menu" />
+                    </Button>
+                </div>
             </header>
 
             {window.location.hostname === 'localhost' && (

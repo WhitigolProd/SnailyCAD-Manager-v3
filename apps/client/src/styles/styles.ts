@@ -23,5 +23,5 @@ export const buttons = {
 };
 
 export const containers = {
-    base: 'h-full pt-5 flex flex-col items-center justify-center',
+    base: 'h-full flex flex-col items-center justify-center',
 };
