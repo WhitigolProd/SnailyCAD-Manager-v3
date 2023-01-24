@@ -2,16 +2,11 @@ import React from 'react';
 import Button from './Buttons/Button';
 import Icon from './Buttons/Icon';
 import { useToast } from '@/lib/useToast';
+import Article from './Article/Article';
 
 export default function Main() {
     return (
-        <article>
-            <header>
-                <div className="flex flex-row gap-1">
-                    <span>SnailyCAD</span>
-                    <span>v1.44.5</span>
-                </div>
-            </header>
+        <Article title="SnailyCAD" subtitle="v1.2.3">
             <div
                 className="flex flex-row justify-center items-center gap-2
             "
@@ -27,6 +22,6 @@ export default function Main() {
                     <span>Start CAD</span>
                 </Button>
             </div>
-        </article>
+        </Article>
     );
 }

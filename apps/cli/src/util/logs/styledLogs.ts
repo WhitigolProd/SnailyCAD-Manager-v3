@@ -2,7 +2,7 @@ import chalk from 'chalk';
 
 const styledLog = {
     info: (message: string) => {
-        console.log(`${chalk.bgGreen(' INFO ')} ${message}`);
+        console.log(`${chalk.bgBlueBright(' INFO ')} ${message}`);
     },
     error: (message: string) => {
         console.log(`${chalk.bgRed(' ERROR ')} ${message}`);

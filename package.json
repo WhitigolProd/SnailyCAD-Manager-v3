@@ -10,6 +10,7 @@
         "packages/*"
     ],
     "scripts": {
+        "start": "yarn workspace @sc-manager/client start",
         "build": "turbo run build",
         "dev": "turbo run dev --parallel",
         "lint": "turbo run lint",
