@@ -4,6 +4,7 @@ import path from 'path';
 import styledLog from '../logs/styledLogs.js';
 import appStorage from '../storage/appStorage.js';
 import mainMenu from '../../menus/mainMenu.js';
+import nanospinner from 'nanospinner';
 
 export default async function startManager() {
     const userPort = appStorage.get('port');
@@ -15,8 +16,10 @@ export default async function startManager() {
         return await mainMenu();
     }
 
+    const spinner = nanospinner.createSpinner('Starting Manager...');
+
     const managerProcess = spawn(
-        `yarn workspace @sc-manager/client next start -p ${userPort}`,
+        `yarn workspace @sc-manager/client next start -p ${userPort || 3000}`,
         {
             cwd: rootPath,
             shell: true,
@@ -24,6 +27,9 @@ export default async function startManager() {
         }
     );
     managerProcess.stdout.on('data', (data) => {
+        spinner.success({
+            text: 'Manager is ready!',
+        });
         styledLog.info(data.toString());
         if (data.toString().includes('Server started')) {
             handleOnReady();

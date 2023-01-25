@@ -8,7 +8,7 @@ export default function Article({
 }: {
     children: React.ReactNode;
     title: string;
-    subtitle?: string;
+    subtitle?: string | React.ReactNode;
     className?: string;
 }) {
     return (

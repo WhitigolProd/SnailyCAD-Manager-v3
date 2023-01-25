@@ -4,5 +4,6 @@ export default function mainMenu() {
         type: 'list',
         name: 'mainMenu',
         message: 'What would you like to do?',
+        choices: [],
     });
 }

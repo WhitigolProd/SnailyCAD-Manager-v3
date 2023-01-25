@@ -3,10 +3,11 @@ import Button from './Buttons/Button';
 import Icon from './Buttons/Icon';
 import { useToast } from '@/lib/useToast';
 import Article from './Article/Article';
+import CadVersion from './CAD/CadVersion';
 
 export default function Main() {
     return (
-        <Article title="SnailyCAD" subtitle="v1.2.3">
+        <Article title="SnailyCAD" subtitle={<CadVersion />}>
             <div
                 className="flex flex-row justify-center items-center gap-2
             "
