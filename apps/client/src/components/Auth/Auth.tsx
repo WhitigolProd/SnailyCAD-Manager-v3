@@ -18,8 +18,9 @@ export default function Auth() {
             redirect: false,
         });
         if (!result?.ok) {
-            return toast.error('Invalid username or password');
+            return toast.error('Invalid Credentials');
         }
+        toast.success('Logged In');
     };
 
     return (

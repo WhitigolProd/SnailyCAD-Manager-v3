@@ -29,7 +29,9 @@ export const authOptions: NextAuthOptions = {
             },
 
             async authorize(credentials) {
-                const user = userStorage.find(credentials!.username);
+                const user = userStorage.find(
+                    credentials!.username.toLowerCase()
+                );
                 if (user && user.password === credentials!.password) {
                     return user;
                 }
@@ -48,7 +50,7 @@ export const authOptions: NextAuthOptions = {
     },
 
     jwt: {
-        secret: keygen(16),
+        secret: 'super-secret-key',
     },
 };
 

@@ -13,8 +13,13 @@ export default function RootLayout({
     session,
 }: {
     children: React.ReactNode;
-    session: any;
+    session?: any;
 }) {
+    if (typeof window !== 'undefined') {
+        window.addEventListener('submit', (e) => {
+            e.preventDefault();
+        });
+    }
     return (
         <html lang="en">
             {/*

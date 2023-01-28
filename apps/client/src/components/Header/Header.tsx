@@ -21,7 +21,7 @@ export default function Header() {
         <>
             <ToastContainer
                 position="bottom-left"
-                autoClose={5000000}
+                autoClose={5000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick

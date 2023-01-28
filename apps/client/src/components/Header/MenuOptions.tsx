@@ -1,6 +1,7 @@
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React from 'react';
+import { toast } from 'react-toastify';
 import Button from '../Buttons/Button';
 import Icon from '../Buttons/Icon';
 import BottomInfo from '../Info/BottomInfo';
@@ -10,6 +11,15 @@ export default function MenuOptions({
 }: {
     handleOpen: () => void;
 }) {
+    const handleSignOut = () => {
+        handleOpen();
+        signOut({
+            callbackUrl: '/',
+            redirect: false,
+        });
+        toast.info('Logged Out');
+    };
+
     const { data: session } = useSession();
     return (
         <div className="flex flex-col justify-center items-center gap-3">
@@ -26,7 +36,7 @@ export default function MenuOptions({
                 </Button>
             </Link>
             {session?.user && (
-                <Button style="danger" size="sm" onClick={signOut}>
+                <Button style="danger" size="sm" onClick={handleSignOut}>
                     <Icon IconName="logout" />
                     <span>Logout</span>
                 </Button>
