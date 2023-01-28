@@ -18,8 +18,7 @@ export default function Middle({
         <div className="h-full flex flex-col flex-grow">
             {data?.user ? (
                 <div className="h-full flex flex-col justify-center items-center">
-                    <Main />
-                    <Tools />
+                    {children}
                 </div>
             ) : (
                 <div className={containers.base}>
