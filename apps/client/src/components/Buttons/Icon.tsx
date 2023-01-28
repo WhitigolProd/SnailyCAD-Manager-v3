@@ -2197,6 +2197,12 @@ type IconOptions =
     | 'zoom_out'
     | 'zoom_out_map';
 
-export default function Icon({ IconName }: { IconName: IconOptions | string }) {
-    return <i className="ico">{IconName}</i>;
+export default function Icon({
+    IconName,
+    className,
+}: {
+    IconName: IconOptions | string;
+    className?: string;
+}) {
+    return <i className={`ico ${className}`}>{IconName}</i>;
 }

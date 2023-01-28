@@ -17,7 +17,7 @@ export default function Tools() {
                 </Button>
                 <Button style="info" size="sm">
                     <Icon IconName="info" />
-                    <span>About & More</span>
+                    <span>Information</span>
                 </Button>
             </div>
         </Article>

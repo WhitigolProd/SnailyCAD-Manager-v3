@@ -1,5 +1,5 @@
 export const buttons = {
-    base: 'flex flex-row items-center justify-center gap-1 w-fit cursor-pointer text-white font-medium rounded-md text-xs leading-tight shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out select-none',
+    base: 'flex flex-row items-center justify-center gap-1 w-fit cursor-pointer text-white font-medium rounded-md border-none text-xs leading-tight shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out select-none',
     colors: {
         primary:
             'bg-blue-600 hover:bg-blue-700 focus:bg-blue-800 active:bg-blue-800',

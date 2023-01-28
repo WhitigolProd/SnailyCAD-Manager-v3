@@ -1,15 +1,19 @@
+'use client';
 import '../styles/tailwind.css';
 import Header from '@/components/Header/Header';
-import Auth from '@/components/Auth/Auth';
-import ToastContainer from '@/components/Toast/ToastContainer';
+import 'react-toastify/dist/ReactToastify.css';
+import Middle from '@/components/Auth/Middle';
+import { SessionProvider } from 'next-auth/react';
 let user = true; //! Testing purposes only - remove in production
 
 // Get the window.location.hostname from the browser
 
 export default function RootLayout({
     children,
+    session,
 }: {
     children: React.ReactNode;
+    session: any;
 }) {
     return (
         <html lang="en">
@@ -19,19 +23,14 @@ export default function RootLayout({
       */}
             <head />
             <body className="h-screen">
-                <ToastContainer />
-                <div className="h-full flex flex-col flex-grow">
-                    {user ? (
-                        <>
-                            <Header />
-                            {children}
-                        </>
-                    ) : (
-                        <div className="flex flex-col justify-center items-center h-full">
-                            <Auth />
-                        </div>
-                    )}
-                </div>
+                <SessionProvider session={session}>
+                    <div className="h-full flex flex-col flex-grow">
+                        <Header />
+                        <Middle session={session}>
+                            <>{children}</>
+                        </Middle>
+                    </div>
+                </SessionProvider>
             </body>
         </html>
     );

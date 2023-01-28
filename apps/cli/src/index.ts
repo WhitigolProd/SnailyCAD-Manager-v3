@@ -5,8 +5,8 @@ import mainMenu from './menus/mainMenu.js';
 import checkConfig from './util/checkConfig.js';
 import info from './util/info.js';
 import rootPath from './util/rootPath.js';
+import userStorage from './util/storage/userStorage.js';
 
 console.log(chalk.greenBright('Welcome to SnailyCAD Manager!'));
 info();
-await checkConfig();
-mainMenu();
+console.log(userStorage.find('test'));

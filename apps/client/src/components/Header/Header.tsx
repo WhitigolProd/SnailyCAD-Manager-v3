@@ -6,8 +6,8 @@ import Article from '../Article/Article';
 import ArticleFooter from '../Article/ArticleFooter';
 import Button from '../Buttons/Button';
 import Icon from '../Buttons/Icon';
-import BottomInfo from '../Info/BottomInfo';
 import MenuOptions from './MenuOptions';
+import { ToastContainer } from 'react-toastify';
 
 // Handle open/close of dialog using state
 
@@ -19,6 +19,18 @@ export default function Header() {
 
     return (
         <>
+            <ToastContainer
+                position="bottom-left"
+                autoClose={5000000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
             <header className="w-full py-3 bg-sky-800/20 text-white">
                 <div className="container flex flex-row justify-between items-center">
                     <Link href="/">
