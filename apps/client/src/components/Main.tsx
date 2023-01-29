@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from './Buttons/Button';
-import Icon from './Buttons/Icon';
 import { toast } from 'react-toastify';
+import Button from '@/components/Buttons/Button';
+import Icon from '@/components/Buttons/Icon';
 import Article from './Article/Article';
 import CadVersion from './CAD/CadVersion';
 

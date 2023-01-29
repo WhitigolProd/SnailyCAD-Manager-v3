@@ -3,9 +3,9 @@ import { signIn } from 'next-auth/react';
 import React, { useRef } from 'react';
 import Article from '../Article/Article';
 import ArticleFooter from '../Article/ArticleFooter';
-import Button from '../Buttons/Button';
-import Icon from '../Buttons/Icon';
 import { toast } from 'react-toastify';
+import Button from '@/components/Buttons/Button';
+import Icon from '@/components/Buttons/Icon';
 
 export default function Auth() {
     const username = useRef('');

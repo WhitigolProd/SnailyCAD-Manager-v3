@@ -1,4 +1,5 @@
-import { buttons } from '@/styles/styles';
+'use client';
+import { buttons } from './styles';
 import React from 'react';
 
 export default function Button({
@@ -6,6 +7,7 @@ export default function Button({
     style,
     size,
     type,
+    disabled,
     className,
     onClick,
 }: {
@@ -22,11 +24,11 @@ export default function Button({
         | 'link';
     size?: 'sm' | 'md' | 'lg';
     type?: 'button' | 'submit' | 'reset';
+    disabled?: boolean;
     className?: string;
     onClick?: () => void;
 }) {
     return (
-        // Button with the selected style & size with a default fallback
         <button
             className={`${buttons.base} ${buttons.sizes[size || 'sm']} ${
                 buttons.colors[style || 'dark']

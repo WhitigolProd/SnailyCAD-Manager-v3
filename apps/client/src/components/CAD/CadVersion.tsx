@@ -4,8 +4,8 @@ import axios from 'axios';
 import useCustomLog from '@/util/client/useCustomLog';
 import Article from '../Article/Article';
 import ArticleFooter from '../Article/ArticleFooter';
-import Button from '../Buttons/Button';
-import Icon from '../Buttons/Icon';
+import Button from '@/components/Buttons/Button';
+import Icon from '@/components/Buttons/Icon';
 import Link from 'next/link';
 
 const getCadVersion = async () => {

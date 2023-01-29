@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 import logo from '../../../public/icon-white.png';
 import Article from '../Article/Article';
 import ArticleFooter from '../Article/ArticleFooter';
-import Button from '../Buttons/Button';
-import Icon from '../Buttons/Icon';
 import MenuOptions from './MenuOptions';
 import { ToastContainer } from 'react-toastify';
+import Button from '@/components/Buttons/Button';
+import Icon from '@/components/Buttons/Icon';
 
 // Handle open/close of dialog using state
 

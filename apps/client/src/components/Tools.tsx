@@ -1,7 +1,7 @@
+import Button from '@/components/Buttons/Button';
+import Icon from '@/components/Buttons/Icon';
 import React from 'react';
 import Article from './Article/Article';
-import Button from './Buttons/Button';
-import Icon from './Buttons/Icon';
 
 export default function Tools() {
     return (

@@ -12,6 +12,8 @@
     },
     "dependencies": {
         "@next/font": "13.1.3",
+        "@sc-manager/cli": "0.0.0",
+        "@sc-manager/ui": "0.0.0",
         "@types/node": "18.11.18",
         "@types/react": "18.0.27",
         "@types/react-dom": "18.0.10",
@@ -23,8 +25,7 @@
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-toastify": "^9.1.1",
-        "typescript": "4.9.4",
-        "@sc-manager/cli": "0.0.0"
+        "typescript": "4.9.4"
     },
     "devDependencies": {
         "postcss": "^8.4.21",

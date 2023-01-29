@@ -1,5 +1,5 @@
-import Button from '@/components/Buttons/Button';
 import { containers } from '@/styles/styles';
+import Button from '@/components/Buttons/Button';
 import React from 'react';
 
 export default function BtnsExample() {

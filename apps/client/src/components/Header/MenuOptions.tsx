@@ -1,9 +1,9 @@
+import Button from '@/components/Buttons/Button';
+import Icon from '@/components/Buttons/Icon';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React from 'react';
 import { toast } from 'react-toastify';
-import Button from '../Buttons/Button';
-import Icon from '../Buttons/Icon';
 import BottomInfo from '../Info/BottomInfo';
 
 export default function MenuOptions({
