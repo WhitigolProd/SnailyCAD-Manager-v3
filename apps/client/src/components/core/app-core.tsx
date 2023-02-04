@@ -12,6 +12,8 @@ import {
     useMantineTheme,
 } from '@mantine/core';
 import { AppNav } from './nav/nav';
+import AppSidebar from './nav/sidebar';
+import AppHeader from './nav/header';
 
 interface AppCoreProps {
     children: React.ReactNode;
@@ -33,20 +35,19 @@ export default function AppCore(props: AppCoreProps) {
             navbarOffsetBreakpoint="sm"
             asideOffsetBreakpoint="sm"
             navbar={<AppNav hidden={!opened} />}
-            aside={
-                <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-                    <Aside
-                        p="md"
-                        hiddenBreakpoint="sm"
-                        width={{ sm: 200, lg: 300 }}
-                    >
-                        <Text>Application sidebar</Text>
-                    </Aside>
-                </MediaQuery>
-            }
+            aside={<AppSidebar />}
             footer={
-                <Footer height={60} p="md">
-                    Application footer
+                <Footer
+                    height={60}
+                    p="md"
+                    className="flex justify-center items-center gap-2"
+                >
+                    Built with
+                    <span className="text-lg text-red-500 animate-bounce">
+                        &hearts;
+                    </span>
+                    by Whitigol, with Next.js. &copy; {new Date().getFullYear()}{' '}
+                    Whitigol Web Design. All rights reserved.
                 </Footer>
             }
             header={
@@ -71,7 +72,7 @@ export default function AppCore(props: AppCoreProps) {
                             />
                         </MediaQuery>
 
-                        <Text>Application header</Text>
+                        <AppHeader />
                     </div>
                 </Header>
             }

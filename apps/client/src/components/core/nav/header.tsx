@@ -3,6 +3,10 @@ import React from 'react';
 import logo from 'public/icon.png';
 import Link from 'next/link';
 
+interface AppHeaderProps {
+    open: boolean;
+}
+
 export default function AppHeader() {
     return (
         <Link href="/">
