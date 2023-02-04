@@ -93,7 +93,7 @@ const useStyles = createStyles((theme, _params, getRef) => {
 });
 
 const tabs = {
-    manager: [{ link: '', label: 'Dashboard', icon: <DashboardIcon /> }],
+    snailycad: [{ link: '', label: 'Dashboard', icon: <DashboardIcon /> }],
     misc: [{ link: '', label: 'Test 2', icon: null }],
 };
 
@@ -103,7 +103,7 @@ interface AppNavProps {
 
 export function AppNav(props: AppNavProps) {
     const { classes, cx } = useStyles();
-    const [section, setSection] = useState<'manager' | 'misc'>('manager');
+    const [section, setSection] = useState<'snailycad' | 'misc'>('snailycad');
     const [active, setActive] = useState('Dashboard');
 
     const links = tabs[section].map((item) => (
@@ -136,11 +136,13 @@ export function AppNav(props: AppNavProps) {
             <Navbar.Section>
                 <SegmentedControl
                     value={section}
-                    onChange={(value: 'manager' | 'misc') => setSection(value)}
+                    onChange={(value: 'snailycad' | 'misc') =>
+                        setSection(value)
+                    }
                     transitionTimingFunction="ease"
                     fullWidth
                     data={[
-                        { label: 'Manager', value: 'manager' },
+                        { label: 'SnailyCAD', value: 'snailycad' },
                         { label: 'Misc', value: 'misc' },
                     ]}
                 />

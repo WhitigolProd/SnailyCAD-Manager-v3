@@ -14,6 +14,11 @@ import {
 import { AppNav } from './nav/nav';
 import AppSidebar from './nav/sidebar';
 import AppHeader from './nav/header';
+import AppCommandCenter from './command/command-center';
+import {
+    MenuFoldOne as SideCloseIcon,
+    MenuUnfoldOne as SideOpenIcon,
+} from '@icon-park/react';
 
 interface AppCoreProps {
     children: React.ReactNode;
@@ -22,6 +27,7 @@ interface AppCoreProps {
 export default function AppCore(props: AppCoreProps) {
     const theme = useMantineTheme();
     const [opened, setOpened] = useState(false);
+    const [sideOpened, setSideOpened] = useState(false);
     return (
         <AppShell
             styles={{
@@ -35,7 +41,7 @@ export default function AppCore(props: AppCoreProps) {
             navbarOffsetBreakpoint="sm"
             asideOffsetBreakpoint="sm"
             navbar={<AppNav hidden={!opened} />}
-            aside={<AppSidebar />}
+            aside={<AppSidebar hidden={!sideOpened} />}
             footer={
                 <Footer
                     height={60}
@@ -46,8 +52,7 @@ export default function AppCore(props: AppCoreProps) {
                     <span className="text-lg text-red-500 animate-bounce">
                         &hearts;
                     </span>
-                    by Whitigol, with Next.js. &copy; {new Date().getFullYear()}{' '}
-                    Whitigol Web Design. All rights reserved.
+                    by Whitigol, with Next.js.
                 </Footer>
             }
             header={
@@ -68,15 +73,40 @@ export default function AppCore(props: AppCoreProps) {
                                 onClick={() => setOpened((o) => !o)}
                                 size="sm"
                                 color={theme.colors.gray[6]}
-                                mr="xl"
                             />
                         </MediaQuery>
 
-                        <AppHeader />
+                        <div className="flex w-full items-center justify-between">
+                            <div className="mx-auto">
+                                <AppHeader />
+                            </div>
+
+                            <MediaQuery
+                                largerThan="sm"
+                                styles={{ display: 'none' }}
+                            >
+                                {sideOpened ? (
+                                    <SideCloseIcon
+                                        size="24"
+                                        onClick={() => setSideOpened((o) => !o)}
+                                        className={`cursor-pointer`}
+                                        fill={theme.colors.gray[6]}
+                                    />
+                                ) : (
+                                    <SideOpenIcon
+                                        size="24"
+                                        onClick={() => setSideOpened((o) => !o)}
+                                        className="cursor-pointer"
+                                        fill={theme.colors.gray[6]}
+                                    />
+                                )}
+                            </MediaQuery>
+                        </div>
                     </div>
                 </Header>
             }
         >
+            <AppCommandCenter />
             {props.children}
         </AppShell>
     );
