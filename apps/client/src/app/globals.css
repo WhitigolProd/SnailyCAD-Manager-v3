@@ -1,24 +1,3 @@
-@import url('https://unpkg.com/@picocss/pico@latest/css/pico.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.ico {
-    font-family: 'Material Symbols Outlined', sans-serif;
-    font-size: inherit;
-    font-weight: inherit;
-    font-style: inherit;
-}
-
-.btn {
-    @apply p-2 bg-sky-500 bg-opacity-20;
-}
-
-a {
-    @apply !bg-transparent text-sky-500 hover:text-sky-600 focus:bg-sky-700 active:bg-sky-700;
-}
-
-.Toastify__close-button {
-    @apply w-3;
-}

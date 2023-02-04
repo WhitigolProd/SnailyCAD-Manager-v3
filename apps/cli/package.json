@@ -1,5 +1,5 @@
 {
-    "name": "@sc-manager/cli",
+    "name": "@scm/cli",
     "version": "0.0.0",
     "description": "",
     "main": "dist/index.js",

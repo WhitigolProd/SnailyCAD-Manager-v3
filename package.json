@@ -10,13 +10,13 @@
         "packages/*"
     ],
     "scripts": {
-        "start": "yarn workspace @sc-manager/client start",
+        "start": "yarn workspace @scm/client start",
         "build": "turbo run build",
         "dev": "turbo run dev --parallel",
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-        "tailwind": "yarn workspace @sc-manager/client run tailwind",
-        "tailwind:watch": "yarn workspace @sc-manager/client run tailwind:watch",
+        "tailwind": "yarn workspace @scm/client run tailwind",
+        "tailwind:watch": "yarn workspace @scm/client run tailwind:watch",
         "watch": "turbo run watch --parallel"
     },
     "devDependencies": {
