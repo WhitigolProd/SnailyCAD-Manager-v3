@@ -39,4 +39,4 @@ tailwind.css
 dist
 
 # Storage Folder
-storage
+.storage
