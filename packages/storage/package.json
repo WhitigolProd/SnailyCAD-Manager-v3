@@ -1,0 +1,11 @@
+{
+    "private": true,
+    "name": "@scm/storage",
+    "version": "0.0.0",
+    "description": "Storage Controller for SnailyCAD Manager",
+    "main": "dist/index.js",
+    "author": "Whitigol Web Design",
+    "devDependencies": {
+        "typescript": "^4.9.5"
+    }
+}
