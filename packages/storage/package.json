@@ -5,6 +5,10 @@
     "description": "Storage Controller for SnailyCAD Manager",
     "main": "dist/index.js",
     "author": "Whitigol Web Design",
+    "scripts": {
+        "dev": "tsc -w",
+        "build": "tsc"
+    },
     "devDependencies": {
         "typescript": "^4.9.5"
     }
