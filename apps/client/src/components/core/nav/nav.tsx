@@ -5,6 +5,7 @@ import {
     AllApplication as DashboardIcon,
     TopicDiscussion as DiscordIcon,
     Logout as LogoutIcon,
+    SettingConfig as ConfigIcon,
 } from '@icon-park/react';
 
 const useStyles = createStyles((theme, _params, getRef) => {
@@ -93,7 +94,10 @@ const useStyles = createStyles((theme, _params, getRef) => {
 });
 
 const tabs = {
-    snailycad: [{ link: '', label: 'Dashboard', icon: <DashboardIcon /> }],
+    snailycad: [
+        { link: '', label: 'Dashboard', icon: <DashboardIcon /> },
+        { link: '', label: 'Configure SnailyCAD', icon: <ConfigIcon /> },
+    ],
     misc: [{ link: '', label: 'Test 2', icon: null }],
 };
 
