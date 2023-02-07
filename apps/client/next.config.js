@@ -15,6 +15,10 @@ module.exports = nextConfig;
 
 module.exports = withSentryConfig(
     module.exports,
-    { silent: true },
+    {
+        silent: true,
+        authToken:
+            '57084cbd5ef94da79bba6b244f3e940ef286f7de75644ce0b746091648ba1331',
+    },
     { hideSourceMaps: true }
 );
