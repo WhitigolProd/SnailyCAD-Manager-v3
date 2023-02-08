@@ -1,0 +1,16 @@
+{
+    "name": "@scm/util",
+    "version": "0.0.0",
+    "description": "Utilities for SnailyCAD Manager v3",
+    "main": "./dist/index.js",
+    "types": "./types/index.d.ts",
+    "type": "module",
+    "scripts": {
+        "dev": "tsc -w",
+        "build": "tsc"
+    },
+    "author": "Whitigol Web Design",
+    "devDependencies": {
+        "typescript": "^4.9.5"
+    }
+}

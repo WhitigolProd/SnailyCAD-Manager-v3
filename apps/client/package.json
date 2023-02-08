@@ -32,7 +32,8 @@
         "react-dom": "18.2.0",
         "sharp": "^0.31.3",
         "typescript": "4.9.5",
-        "@scm/storage": "0.0.0"
+        "@scm/storage": "0.0.0",
+        "@scm/util": "0.0.0"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.13",
