@@ -1,14 +1,30 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Input } from '@mantine/core';
 import { Send as SendIcon } from '@icon-park/react';
+import axios from 'axios';
+import io, { Socket } from 'socket.io-client';
+
+export let clientSocket: Socket;
 
 export default function AppTerminal() {
+    async function socketInit() {
+        await axios.get('/api/socket');
+        clientSocket = io();
+        clientSocket.on('connect', () => {
+            console.log('Server Socket Connected');
+        });
+    }
+
+    useEffect(() => {
+        socketInit();
+    }, []);
+
     return (
         <>
             <div className="relative flex flex-col grow bg-black/50 rounded-lg w-full">
                 <pre className="text-xs font-mono p-4">
-                    <code className="flex flex-col">
+                    <code className="flex flex-col whitespace-normal">
                         yarn install
                         <span className="text-green-400">
                             [1/4] Resolving packages...

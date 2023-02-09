@@ -64,6 +64,7 @@ export interface HeaderSearchProps {
     links: {
         link: string;
         label: string;
+        target?: '_blank' | '_self' | '_parent' | '_top';
         links: { link: string; label: string }[];
     }[];
 }
@@ -74,7 +75,9 @@ export default function AppHeader({ links }: HeaderSearchProps) {
 
     const items = links.map((link) => {
         const menuItems = link.links?.map((item) => (
-            <Menu.Item key={item.link}>{item.label}</Menu.Item>
+            <Link href={link.link} key={link.label} target={link.target}>
+                <Menu.Item key={item.link}>{item.label}</Menu.Item>
+            </Link>
         ));
 
         if (menuItems) {
@@ -85,18 +88,18 @@ export default function AppHeader({ links }: HeaderSearchProps) {
                     exitTransitionDuration={0}
                 >
                     <Menu.Target>
-                        <Link
-                            href={link.link}
-                            className={classes.link}
-                            onClick={(event) => event.preventDefault()}
-                        >
-                            <Center>
+                        <Center>
+                            <Link
+                                href={link.link}
+                                key={link.label}
+                                className={classes.link}
+                            >
                                 <span className={classes.linkLabel}>
                                     {link.label}
                                 </span>
                                 <DownIcon size={12} />
-                            </Center>
-                        </Link>
+                            </Link>
+                        </Center>
                     </Menu.Target>
                     <Menu.Dropdown>{menuItems}</Menu.Dropdown>
                 </Menu>
@@ -104,14 +107,9 @@ export default function AppHeader({ links }: HeaderSearchProps) {
         }
 
         return (
-            <a
-                key={link.label}
-                href={link.link}
-                className={classes.link}
-                onClick={(event) => event.preventDefault()}
-            >
+            <Link key={link.label} href={link.link} className={classes.link}>
                 {link.label}
-            </a>
+            </Link>
         );
     });
 

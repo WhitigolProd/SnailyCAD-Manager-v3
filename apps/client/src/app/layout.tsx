@@ -1,7 +1,8 @@
 'use client';
 import './globals.css';
 import { MantineProvider } from '@mantine/core';
-import AppCore from '@/components/core/app-core';
+import RouterTransition from '@/components/core/router/router-transition';
+import { NotificationsProvider } from '@mantine/notifications';
 
 export default function RootLayout({
     children,
@@ -28,7 +29,10 @@ export default function RootLayout({
                         colorScheme: 'dark',
                     }}
                 >
-                    {children}
+                    <NotificationsProvider>
+                        <RouterTransition />
+                        {children}
+                    </NotificationsProvider>
                 </MantineProvider>
             </body>
         </html>

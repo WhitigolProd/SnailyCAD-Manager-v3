@@ -42,7 +42,7 @@ export default function AppCore(props: AppCoreProps) {
             navbarOffsetBreakpoint="sm"
             asideOffsetBreakpoint="sm"
             // navbar={<AppNav hidden={!opened} />}
-            // aside={<AppSidebar hidden={!sideOpened} />}
+            aside={<AppSidebar hidden={!sideOpened} />}
             footer={
                 <Footer
                     height={60}
@@ -59,54 +59,6 @@ export default function AppCore(props: AppCoreProps) {
             header={
                 // @ts-ignore - Cutom Type
                 <AppHeader links={links} />
-                // <Header height={{ base: 50, md: 70 }} p="md">
-                //     <div
-                //         style={{
-                //             display: 'flex',
-                //             alignItems: 'center',
-                //             height: '100%',
-                //         }}
-                //     >
-                //         <MediaQuery
-                //             largerThan="sm"
-                //             styles={{ display: 'none' }}
-                //         >
-                //             <Burger
-                //                 opened={opened}
-                //                 onClick={() => setOpened((o) => !o)}
-                //                 size="sm"
-                //                 color={theme.colors.gray[6]}
-                //             />
-                //         </MediaQuery>
-
-                //         <div className="flex w-full items-center justify-between">
-                //             <div className="mx-auto">
-                //                 <AppHeader />
-                //             </div>
-
-                //             <MediaQuery
-                //                 largerThan="sm"
-                //                 styles={{ display: 'none' }}
-                //             >
-                //                 {sideOpened ? (
-                //                     <SideCloseIcon
-                //                         size="24"
-                //                         onClick={() => setSideOpened((o) => !o)}
-                //                         className={`cursor-pointer`}
-                //                         fill={theme.colors.gray[6]}
-                //                     />
-                //                 ) : (
-                //                     <SideOpenIcon
-                //                         size="24"
-                //                         onClick={() => setSideOpened((o) => !o)}
-                //                         className="cursor-pointer"
-                //                         fill={theme.colors.gray[6]}
-                //                     />
-                //                 )}
-                //             </MediaQuery>
-                //         </div>
-                //     </div>
-                // </Header>
             }
         >
             <AppCommandCenter />

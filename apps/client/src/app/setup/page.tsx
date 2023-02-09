@@ -1,6 +1,11 @@
+import AppCore from '@/components/core/app-core';
 import React from 'react';
 import Main from './main';
 
 export default function SetupPage() {
-    return <Main />;
+    return (
+        <AppCore>
+            <Main />
+        </AppCore>
+    );
 }
