@@ -4,6 +4,7 @@ import React from 'react';
 import { PlayOne as StartIcon } from '@icon-park/react';
 import startCad from '@/util/control/startCad';
 import AppTerminal from '../terminal/terminal';
+import Link from 'next/link';
 
 export default function DashboardMain() {
     return (
@@ -33,6 +34,9 @@ export default function DashboardMain() {
                         >
                             Start SnailyCAD
                         </Button>
+                        <Link href="/setup">
+                            <Button>Stop SnailyCAD</Button>
+                        </Link>
                     </div>
                 </Card.Section>
             </Card>

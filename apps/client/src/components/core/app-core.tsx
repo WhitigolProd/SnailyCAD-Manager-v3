@@ -13,12 +13,13 @@ import {
 } from '@mantine/core';
 import { AppNav } from './nav/nav';
 import AppSidebar from './nav/sidebar';
-import AppHeader from './nav/header';
+import AppHeader from '@/components/core/nav/header';
 import AppCommandCenter from './command/command-center';
 import {
     MenuFoldOne as SideCloseIcon,
     MenuUnfoldOne as SideOpenIcon,
 } from '@icon-park/react';
+import { links } from '@/util/header/links';
 
 interface AppCoreProps {
     children: React.ReactNode;
@@ -40,8 +41,8 @@ export default function AppCore(props: AppCoreProps) {
             }}
             navbarOffsetBreakpoint="sm"
             asideOffsetBreakpoint="sm"
-            navbar={<AppNav hidden={!opened} />}
-            aside={<AppSidebar hidden={!sideOpened} />}
+            // navbar={<AppNav hidden={!opened} />}
+            // aside={<AppSidebar hidden={!sideOpened} />}
             footer={
                 <Footer
                     height={60}
@@ -56,54 +57,56 @@ export default function AppCore(props: AppCoreProps) {
                 </Footer>
             }
             header={
-                <Header height={{ base: 50, md: 70 }} p="md">
-                    <div
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            height: '100%',
-                        }}
-                    >
-                        <MediaQuery
-                            largerThan="sm"
-                            styles={{ display: 'none' }}
-                        >
-                            <Burger
-                                opened={opened}
-                                onClick={() => setOpened((o) => !o)}
-                                size="sm"
-                                color={theme.colors.gray[6]}
-                            />
-                        </MediaQuery>
+                // @ts-ignore - Cutom Type
+                <AppHeader links={links} />
+                // <Header height={{ base: 50, md: 70 }} p="md">
+                //     <div
+                //         style={{
+                //             display: 'flex',
+                //             alignItems: 'center',
+                //             height: '100%',
+                //         }}
+                //     >
+                //         <MediaQuery
+                //             largerThan="sm"
+                //             styles={{ display: 'none' }}
+                //         >
+                //             <Burger
+                //                 opened={opened}
+                //                 onClick={() => setOpened((o) => !o)}
+                //                 size="sm"
+                //                 color={theme.colors.gray[6]}
+                //             />
+                //         </MediaQuery>
 
-                        <div className="flex w-full items-center justify-between">
-                            <div className="mx-auto">
-                                <AppHeader />
-                            </div>
+                //         <div className="flex w-full items-center justify-between">
+                //             <div className="mx-auto">
+                //                 <AppHeader />
+                //             </div>
 
-                            <MediaQuery
-                                largerThan="sm"
-                                styles={{ display: 'none' }}
-                            >
-                                {sideOpened ? (
-                                    <SideCloseIcon
-                                        size="24"
-                                        onClick={() => setSideOpened((o) => !o)}
-                                        className={`cursor-pointer`}
-                                        fill={theme.colors.gray[6]}
-                                    />
-                                ) : (
-                                    <SideOpenIcon
-                                        size="24"
-                                        onClick={() => setSideOpened((o) => !o)}
-                                        className="cursor-pointer"
-                                        fill={theme.colors.gray[6]}
-                                    />
-                                )}
-                            </MediaQuery>
-                        </div>
-                    </div>
-                </Header>
+                //             <MediaQuery
+                //                 largerThan="sm"
+                //                 styles={{ display: 'none' }}
+                //             >
+                //                 {sideOpened ? (
+                //                     <SideCloseIcon
+                //                         size="24"
+                //                         onClick={() => setSideOpened((o) => !o)}
+                //                         className={`cursor-pointer`}
+                //                         fill={theme.colors.gray[6]}
+                //                     />
+                //                 ) : (
+                //                     <SideOpenIcon
+                //                         size="24"
+                //                         onClick={() => setSideOpened((o) => !o)}
+                //                         className="cursor-pointer"
+                //                         fill={theme.colors.gray[6]}
+                //                     />
+                //                 )}
+                //             </MediaQuery>
+                //         </div>
+                //     </div>
+                // </Header>
             }
         >
             <AppCommandCenter />
