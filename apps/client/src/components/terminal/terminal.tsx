@@ -8,17 +8,17 @@ import io, { Socket } from 'socket.io-client';
 export let clientSocket: Socket;
 
 export default function AppTerminal() {
-    async function socketInit() {
-        await axios.get('/api/socket');
-        clientSocket = io();
-        clientSocket.on('connect', () => {
-            console.log('Server Socket Connected');
-        });
-    }
+    // async function socketInit() {
+    //     await axios.get('/api/socket');
+    //     clientSocket = io();
+    //     clientSocket.on('connect', () => {
+    //         console.log('Server Socket Connected');
+    //     });
+    // }
 
-    useEffect(() => {
-        socketInit();
-    }, []);
+    // useEffect(() => {
+    //     socketInit();
+    // }, []);
 
     return (
         <>
