@@ -7,6 +7,7 @@ import {
     Logout as LogoutIcon,
     SettingConfig as ConfigIcon,
 } from '@icon-park/react';
+import Link from 'next/link';
 
 const useStyles = createStyles((theme, _params, getRef) => {
     const icon = getRef('icon');
@@ -96,7 +97,7 @@ const useStyles = createStyles((theme, _params, getRef) => {
 const tabs = {
     snailycad: [
         { link: '', label: 'Dashboard', icon: <DashboardIcon /> },
-        { link: '', label: 'Configure SnailyCAD', icon: <ConfigIcon /> },
+        { link: '/setup', label: 'Configure SnailyCAD', icon: <ConfigIcon /> },
     ],
     misc: [{ link: '', label: 'Test 2', icon: null }],
 };
@@ -111,7 +112,7 @@ export function AppNav(props: AppNavProps) {
     const [active, setActive] = useState('Dashboard');
 
     const links = tabs[section].map((item) => (
-        <a
+        <Link
             className={cx(classes.link, {
                 [classes.linkActive]: item.label === active,
             })}
@@ -126,7 +127,7 @@ export function AppNav(props: AppNavProps) {
                 {item.icon}
                 <span>{item.label}</span>
             </div>
-        </a>
+        </Link>
     ));
 
     return (
@@ -158,8 +159,9 @@ export function AppNav(props: AppNavProps) {
 
             <Navbar.Section className={classes.footer}>
                 <a
-                    href="#"
+                    href="https://whitigol.me/"
                     className={`${classes.link} flex items-center gap-2`}
+                    target="_blank"
                     onClick={(event) => event.preventDefault()}
                 >
                     <DiscordIcon theme="outline" size={20} />

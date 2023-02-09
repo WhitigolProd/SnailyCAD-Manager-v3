@@ -12,7 +12,7 @@
     "scripts": {
         "start": "yarn workspace @scm/client start",
         "build": "turbo run build --no-daemon",
-        "dev": "turbo run dev --parallel",
+        "dev": "turbo run dev --no-daemon --parallel",
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
         "tailwind": "yarn workspace @scm/client run tailwind",
